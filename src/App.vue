@@ -18,6 +18,7 @@ export default {
 
 <template>
     <Header />
+    <Main />
 </template>
 
 <style lang="scss">

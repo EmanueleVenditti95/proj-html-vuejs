@@ -1,3 +1,4 @@
+// RESET RULES
 * {
     margin: 0;
     padding: 0;
@@ -25,6 +26,14 @@ img {
     max-width: 100%;
 }
 
+h1 {
+    font-size: 70px;
+    font-family: var(--bfont);
+    letter-spacing: 3px;
+    color: var(--dark-grey);
+}
+
+// UTILITY CLASS
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -39,6 +48,26 @@ img {
     flex-direction: column;
 }
 
+.button {
+    padding: 15px 30px;
+    color: var(--gold);
+    border: 1px solid var(--gold); 
+    display: inline-block;
+    &:hover {
+        background-color: var(--dark-grey);
+    } 
+}
+
+.text-center {
+    text-align: center;
+}
+
+.gold-title {  
+    color: var(--gold);
+    font-weight: bold;
+}
+
+
 // COLOR PALETTE
 :root {
     --gold: #BE9359;
@@ -48,7 +77,7 @@ img {
     --dark: #000000;
 }
 
-
+// FONTS
 :root {
     --bfont: 'Abril Fatface', serif;
     --afont: 'sans-serif';

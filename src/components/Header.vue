@@ -75,7 +75,7 @@ export default {
                     <h1>Barber Shop</h1>
                     <hr>
                     <p>The Pinnacle of Male Grooming</p>
-                    <a href="#">LEARN MORE</a>
+                    <a href="#" class="button">LEARN MORE</a>
                 </div>
                 <div>
                     <img src="../img/avadabarbers_hero_focalmirror.png" alt="">
@@ -109,9 +109,6 @@ export default {
         justify-content: space-between;
         h1 {
             color: var(--light);
-            font-size: 70px;
-            font-family: var(--bfont);
-            letter-spacing: 3px;
         }
 
         hr {
@@ -122,17 +119,6 @@ export default {
         p {
             color: var(--dark-grey);
             font-size: 24px;
-        }
-
-        a {
-            padding: 15px 30px;
-            background-color: transparent;
-            color: var(--gold);
-            border: 1px solid var(--gold);  
-        }
-
-        a:hover {
-            background-color: var(--dark-grey);
         }
 
         img {
