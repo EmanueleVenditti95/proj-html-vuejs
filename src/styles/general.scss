@@ -1,7 +1,8 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 .debug {
@@ -9,13 +10,19 @@
     height: 500px;
 }
 
-ul,ol,li {
+ul,
+ol,
+li {
     list-style: none;
 }
 
 a {
     text-decoration: none;
     color: currentColor;
+}
+
+img {
+    max-width: 100%;
 }
 
 .container {
@@ -27,8 +34,22 @@ a {
     display: flex;
 }
 
-// COLOR PALETTE 
-$gold : #BE9359;
-$grey : #B0B0B0;
-$light : #FFFFFF;
-$dark : #000000;
+.row-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+// COLOR PALETTE
+:root {
+    --gold: #BE9359;
+    --grey: #B0B0B0;
+    --dark-grey:#717070;
+    --light: #FFFFFF;
+    --dark: #000000;
+}
+
+
+:root {
+    --bfont: 'Abril Fatface', serif;
+    --afont: 'sans-serif';
+}
