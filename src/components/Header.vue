@@ -1,6 +1,50 @@
 <script>
-  export default {
-    name: 'App'
+import MenuLink from "./MenuLink.vue";
+
+export default {
+    components: {
+        MenuLink
+    },
+    data(){
+        return{
+            menuArray : [
+                {
+                    text : 'Home',
+                    link: '#',
+                },
+                {
+                    text : 'About Us',
+                    link: '#',
+                },
+                {
+                    text : 'Services',
+                    link: '#',
+                },
+                {
+                    text : 'Shop',
+                    link: '#',
+                },
+                {
+                    text : 'Our Team',
+                    link: '#',
+                },
+                {
+                    text : 'Blog',
+                    link: '#',
+                },{
+                    text : 'Contact Us',
+                    link: '#',
+                },
+            ],
+            active : false,
+        }
+    },
+    methods: {
+        show() {
+            this.active = !this.active;
+        }
+    }
+
   }
 </script>
 
@@ -11,7 +55,18 @@
                 <img src="../img/avadabarbers-logo-x2-200x70.png" alt="">
                 <ul class="row">
                     <li><font-awesome-icon icon="fa-solid fa-cart-shopping" class="icon"/></li>
-                    <li><font-awesome-icon icon="fa-solid fa-bars" class="icon"/></li>
+                    <li @click="show">
+                        <font-awesome-icon icon="fa-solid fa-bars" class="icon"/>
+                        <ul v-show="this.active" 
+                        class="menu">
+                            <p  class="close-cross">X</p>
+                            <li>
+                                <MenuLink v-for="link in menuArray"
+                                :text="link.text"
+                                :link="link.link"/>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </section>
 
@@ -38,6 +93,9 @@
     background-size: cover;
     max-width: 1920px;
     margin: 0 auto;
+    .container {
+        position: relative;
+    }
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -92,5 +150,23 @@
 .icon {
     color: var(--light);
     font-size: 24px;
+    cursor: pointer;
+}
+
+.menu {
+    color: var(--light);
+    position: absolute;
+    right: 0;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(0, 0, 0, 0.7);
+    border-radius: 10px;
+    .close-cross {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        cursor: pointer;
+        padding: 10px;
+    }
 }
 </style>
