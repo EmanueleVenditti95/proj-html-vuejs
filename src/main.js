@@ -8,9 +8,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 /* import specific icons */
-import {  } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping,faBars } from '@fortawesome/free-solid-svg-icons';
 
 /* add icons to the library */
-library.add();
+library.add( faCartShopping,faBars );
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app');

@@ -1,11 +1,25 @@
 <script>
+import Header from "./components/Header.vue";
+import Main from "./components/Main.vue";
+import Footer from "./components/Footer.vue";
 
+export default {
+    components: {
+        Header,
+        Main,
+        Footer
+    },
+    data() {
+        return {
+        }
+    }
+}
 </script>
 
 <template>
-
+    <Header />
 </template>
 
-<style scoped>
-
+<style lang="scss">
+@use "./styles/general.scss";
 </style>

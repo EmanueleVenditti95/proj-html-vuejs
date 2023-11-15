@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.debug {
+    background-color: rgb(153, 150, 150);
+    height: 500px;
+}
+
+ul,ol,li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+}
+
+// COLOR PALETTE 
+$gold : #BE9359;
+$grey : #B0B0B0;
+$light : #FFFFFF;
+$dark : #000000;
