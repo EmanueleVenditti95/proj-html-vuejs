@@ -1,13 +1,16 @@
 <script>
-import Sections from "./Sections.vue";
+import Services from "./Services.vue";
+import Products from "./Products.vue";
 
 export default {
     components: {
-        Sections
+        Services,
+        Products
     },
     data () {
         return {
-            Sections
+            Services,
+            Products
         }
     }
 }
@@ -24,13 +27,11 @@ export default {
     </section>
 
     <section class="services">
-        <Sections />
+        <Services />
     </section>    
 
     <section class="products container-bg">
-        <div class="container">
-
-        </div>
+        <Products />
     </section>
 </template>
 

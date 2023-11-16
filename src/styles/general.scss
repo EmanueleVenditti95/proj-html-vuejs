@@ -46,6 +46,12 @@ h3 {
     margin: 0 auto;
 }
 
+.container-lg {
+    max-width: 1920px;
+    margin: 0 auto; 
+    padding: 120px 0; 
+}
+
 .row {
     display: flex;
 }
@@ -53,6 +59,10 @@ h3 {
 .row-vertical {
     display: flex;
     flex-direction: column;
+}
+
+.col-3 {
+    flex-basis: calc(100% / 4);
 }
 
 .col-4 {
