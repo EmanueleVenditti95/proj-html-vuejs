@@ -2,21 +2,23 @@
 import Services from "./Services.vue";
 import Products from "./Products.vue";
 import FeaturedProduct from "./FeaturedProduct.vue";
-import Reviews from "./Reviews.vue"
+import Reviews from "./Reviews.vue";
+import BlogPosts from "./BlogPosts.vue";
 
 export default {
     components: {
         Services,
         Products,
         FeaturedProduct,
-        Reviews
+        Reviews,
+        BlogPosts
     }
 }
 
 </script>
 
 <template>
-    <section class="container-bg">
+    <section class="award container-bg">
         <div class="container text-center">
             <p class="gold-title">AWARD WINNING</p>
             <h1>Pro Barbers</h1>
@@ -39,12 +41,16 @@ export default {
     <section class="reviews">
         <Reviews />
     </section>
+
+    <section class="blog-posts container-bg">
+        <BlogPosts />
+    </section>
 </template>
 
 <style lang="scss" scoped>
 @use "../styles/general.scss";
 
-.container-bg {
+.award.container-bg {
     background-image: url("../img/avadabarbers-about-introbackground.jpg");
     background-size: cover;
 }
@@ -66,5 +72,9 @@ export default {
     border-top: 4px solid var(--gold);
     margin-top: -50px;
     padding: 0;
+}
+
+.blog-posts.container-bg {
+    background-color: var(--light-grey);
 }
 </style>

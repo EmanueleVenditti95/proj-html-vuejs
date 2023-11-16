@@ -52,7 +52,7 @@ export default {
         aspect-ratio: 1;
         border-radius: 50%;
         max-width: 120px;
-        margin-bottom: 20px;
+        margin: 20px 0;
     }
     .gold-title {
         font-style: italic;

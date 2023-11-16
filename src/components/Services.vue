@@ -63,15 +63,17 @@ export default {
     h3 {
         margin: 25px 0;
     }
-
-    .icon {
-        margin-top: 20px;
-        max-width: 70px;
-        aspect-ratio: 5 / 8;
-    }
 }
 
 .button {
     margin-top: 30px;
 }
+</style>
+
+<style lang="scss" scoped>
+    .icon {
+        margin-top: 20px;
+        max-width: 70px;
+        aspect-ratio: 5 / 8;
+    }
 </style>
