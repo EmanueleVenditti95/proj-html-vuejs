@@ -53,10 +53,14 @@ export default {
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .price {
     color: var(--gold);
     margin: 20px 0;
     font-weight: lighter;
+}
+
+.button {
+    margin-bottom: 60px;
 }
 </style>
