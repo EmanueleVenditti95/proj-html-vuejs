@@ -91,8 +91,6 @@ export default {
 .container-bg {
     background-image: url('../img/avadabarbers-homepage-hero-bg.jpg');
     background-size: cover;
-    max-width: 1920px;
-    margin: 0 auto;
     .container {
         position: relative;
     }
