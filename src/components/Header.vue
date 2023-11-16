@@ -40,8 +40,12 @@ export default {
         }
     },
     methods: {
-        show() {
+        showMenu() {
             this.active = !this.active;
+            console.log(this.active)
+        },
+        hideMenu() {
+            this.active = false;
         }
     }
 
@@ -49,17 +53,16 @@ export default {
 </script>
 
 <template>
-    <div class="container-bg">
+    <div class="container-bg" @click="hideMenu">
         <div class="container">
             <section class="navbar">
                 <img src="../img/avadabarbers-logo-x2-200x70.png" alt="">
                 <ul class="row">
                     <li><font-awesome-icon icon="fa-solid fa-cart-shopping" class="icon"/></li>
-                    <li @click="show">
+                    <li @click="showMenu" @click.stop>
                         <font-awesome-icon icon="fa-solid fa-bars" class="icon"/>
                         <ul v-show="this.active" 
                         class="menu">
-                            <p  class="close-cross">X</p>
                             <li>
                                 <MenuLink v-for="link in menuArray"
                                 :text="link.text"
@@ -145,12 +148,5 @@ export default {
     padding: 20px;
     background-color: rgb(0, 0, 0, 0.7);
     border-radius: 10px;
-    .close-cross {
-        position: absolute;
-        right: 5px;
-        top: 5px;
-        cursor: pointer;
-        padding: 10px;
-    }
 }
 </style>

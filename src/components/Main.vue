@@ -65,6 +65,7 @@ export default {
 
 .products.container-bg {
     background-image: url("../img/avadabarbers-reviewsbackground.jpg");
+    background-size: contain;
 }
 
 .feat-product.container {
