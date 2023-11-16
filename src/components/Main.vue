@@ -2,12 +2,14 @@
 import Services from "./Services.vue";
 import Products from "./Products.vue";
 import FeaturedProduct from "./FeaturedProduct.vue";
+import Reviews from "./Reviews.vue"
 
 export default {
     components: {
         Services,
         Products,
-        FeaturedProduct
+        FeaturedProduct,
+        Reviews
     }
 }
 
@@ -32,6 +34,10 @@ export default {
 
     <section class="feat-product container">
         <FeaturedProduct />
+    </section>
+
+    <section class="reviews">
+        <Reviews />
     </section>
 </template>
 
