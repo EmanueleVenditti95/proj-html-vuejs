@@ -1,5 +1,24 @@
 <script>
+import { store } from "../store";
 
+export default {
+    components: {
+        store
+    },
+    data() {
+        return {
+            store
+        }
+    },
+    computed: {
+        address() {
+            return store.menuAddress
+        },
+        links() {
+            return store.menuLinks
+        }
+    }
+}
 </script>
 
 <template>
@@ -15,18 +34,17 @@
                 <div class="col-4 row-vertical">
                     <img class="logo" src="../img/avadabarbers-stickylogo-x2.png" alt="">
                     <ul class="address">
-                        <li>Avada Barbers</li>
-                        <li>123 New York Street</li>
-                        <li>New York City</li>
-                        <li>info@yourwebsite.com</li>
-                        <li>+1(555)555-1212</li>
+                        <li>{{ address.title }}</li>
+                        <li>{{ address.road }}</li>
+                        <li>{{ address.city }}</li>
+                        <li>{{ address.website }}</li>
+                        <li>{{ address.num }}</li>
                     </ul>
                     <p class="gold-title">FOLLOW US</p>
                     <ul class="row">
-                        <li><font-awesome-icon icon="fa-brands fa-facebook-f" /></li>
-                        <li><font-awesome-icon icon="fa-brands fa-twitter" /></li>
-                        <li><font-awesome-icon icon="fa-brands fa-youtube" /></li>
-                        <li><font-awesome-icon icon="fa-brands fa-instagram" /></li>
+                        <li v-for="link in links">
+                            <a :href=link.link><font-awesome-icon :icon=link.icon /></a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-4">
