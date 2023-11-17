@@ -12,6 +12,11 @@ export default {
         FeaturedProduct,
         Reviews,
         BlogPosts
+    },
+    methods: {
+        scrollToTop() {
+            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        },
     }
 }
 
@@ -45,6 +50,8 @@ export default {
     <section class="blog-posts container-bg">
         <BlogPosts />
     </section>
+
+    <div class="arrow-up" @click="scrollToTop()"><font-awesome-icon icon="fa-solid fa-chevron-up" /></div>
 </template>
 
 <style lang="scss" scoped>
@@ -57,7 +64,7 @@ export default {
 
 .services.container-bg {
     background: linear-gradient(175deg, var(--light-dark) 8%, transparent 8.5%),
-    linear-gradient(-175deg, var(--light-dark) 8%, transparent 8.5%);
+        linear-gradient(-175deg, var(--light-dark) 8%, transparent 8.5%);
 }
 
 .container {
@@ -70,8 +77,8 @@ export default {
 
 .products.container-bg {
     background: linear-gradient(175deg, var(--light) 8%, transparent 8.5%),
-    linear-gradient(-175deg, var(--light) 8%, transparent 8.5%),
-    url("../img/avadabarbers-reviewsbackground.jpg");
+        linear-gradient(-175deg, var(--light) 8%, transparent 8.5%),
+        url("../img/avadabarbers-reviewsbackground.jpg");
     background-size: contain;
     padding-top: 50px;
 }
@@ -85,10 +92,21 @@ export default {
 
 .reviews.container-bg {
     background: linear-gradient(355deg, var(--light-grey) 10%, transparent 8.5%),
-    linear-gradient(-355deg, var(--light-grey) 10%, transparent 8.5%); 
+        linear-gradient(-355deg, var(--light-grey) 10%, transparent 8.5%);
 }
 
 .blog-posts.container-bg {
     background-color: var(--light-grey);
+}
+
+.arrow-up {
+    position: fixed;
+    bottom: 5px;
+    right: 50px;
+    color: var(--light);
+    background-color: var(--dark-grey);
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 </style>
