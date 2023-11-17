@@ -56,8 +56,8 @@ export default {
 }
 
 .services.container-bg {
-    background: linear-gradient(175deg, #171717 8%, transparent 8.5%),
-    linear-gradient(-175deg, #171717 8%, transparent 8.5%);
+    background: linear-gradient(175deg, var(--light-dark) 8%, transparent 8.5%),
+    linear-gradient(-175deg, var(--light-dark) 8%, transparent 8.5%);
 }
 
 .container {
