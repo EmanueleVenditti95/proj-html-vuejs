@@ -26,7 +26,7 @@ export default {
         </div>
     </section>
 
-    <section class="services">
+    <section class="services container-bg">
         <Services />
     </section>
 
@@ -38,7 +38,7 @@ export default {
         <FeaturedProduct />
     </section>
 
-    <section class="reviews">
+    <section class="reviews container-bg">
         <Reviews />
     </section>
 
@@ -55,6 +55,11 @@ export default {
     background-size: cover;
 }
 
+.services.container-bg {
+    background: linear-gradient(175deg, #171717 8%, transparent 8.5%),
+    linear-gradient(-175deg, #171717 8%, transparent 8.5%);
+}
+
 .container {
     padding: 120px 0;
 
@@ -64,8 +69,11 @@ export default {
 }
 
 .products.container-bg {
-    background-image: url("../img/avadabarbers-reviewsbackground.jpg");
+    background: linear-gradient(175deg, var(--light) 8%, transparent 8.5%),
+    linear-gradient(-175deg, var(--light) 8%, transparent 8.5%),
+    url("../img/avadabarbers-reviewsbackground.jpg");
     background-size: contain;
+    padding-top: 50px;
 }
 
 .feat-product.container {
@@ -73,6 +81,11 @@ export default {
     border-top: 4px solid var(--gold);
     margin-top: -50px;
     padding: 0;
+}
+
+.reviews.container-bg {
+    background: linear-gradient(355deg, var(--light-grey) 10%, transparent 8.5%),
+    linear-gradient(-355deg, var(--light-grey) 10%, transparent 8.5%); 
 }
 
 .blog-posts.container-bg {
